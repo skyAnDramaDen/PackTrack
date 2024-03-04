@@ -1,4 +1,5 @@
 ﻿using AbcParcel.Data;
+using System.Text.Json.Serialization;
 
 namespace AbcParcel.Common
 {
@@ -8,7 +9,8 @@ namespace AbcParcel.Common
         public string TrackingNumber { get; set; }
         public string Description { get; set; }
         public ParcelStatus ParcelStatus { get; set; }
-        public string CreatedBy { get; set; }
+        public string OriginatingLocation { get; set; }
+        public string FinalDestination { get; set; }
     }
     public class CreateParcel
     {
@@ -22,5 +24,15 @@ namespace AbcParcel.Common
         public string Description { get; set; }
         public ParcelStatus ParcelStatus { get; set; }
         public string FinalDestination { get; set; }
+        [JsonIgnore]
+        public int Id { get; set; }
+    }
+    public class UpdateParcelView
+    {
+        public string Description { get; set; }
+        public ParcelStatus ParcelStatus { get; set; }
+        public string FinalDestination { get; set; }
+        [JsonIgnore]
+        public long Id { get; set; }
     }
 }

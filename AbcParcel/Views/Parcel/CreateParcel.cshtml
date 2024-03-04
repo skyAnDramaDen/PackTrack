@@ -1,0 +1,55 @@
+﻿@using AbcParcel.Common;
+@model CreateParcel
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .registration-container {
+        max-width: 200%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<div class="container">
+    <div class="registration-container">
+        <h2>Create Parcel</h2>
+        <hr />
+
+        @using (Html.BeginForm("RegisterParcel", "Parcel", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description)
+                @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.OriginatingLocation)
+                @Html.TextBoxFor(model => model.OriginatingLocation, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OriginatingLocation, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FinalDestination)
+                @Html.TextBoxFor(model => model.FinalDestination, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FinalDestination, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-1">Create Parcel</button>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

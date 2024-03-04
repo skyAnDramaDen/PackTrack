@@ -1,18 +1,98 @@
-﻿<!DOCTYPE html>
+﻿<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #343a40;
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #ffffff;
+        border-radius: 2px;
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        margin: 0 15px;
+        font-size: 1.1rem;
+        transition: color 0.3s ease-in-out;
+    }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+    .container {
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    /*.footer {
+            background-color: #343a40;
+            padding: 10px 0;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+        }*/
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+    main {
+        padding: 20px;
+    }
+</style>
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AbcParcel</title>
+    <title>@ViewData["Title"] - MyPackageTracker</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AbcParcel.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyPackageTracker.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark text-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AbcParcel</a>
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">MyPackageTracker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,12 +100,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
@@ -38,7 +119,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - AbcParcel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - MyPackageTracker - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

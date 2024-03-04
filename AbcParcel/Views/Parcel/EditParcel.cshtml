@@ -1,0 +1,66 @@
+﻿@using AbcParcel.Common
+@using AbcParcel.Data;
+@model ParcelViewModel
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .registration-container {
+        max-width: 200%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<div class="container">
+    <div class="registration-container">
+        <h2>Edit Parcel</h2>
+        <hr />
+
+        <form method="post" class="border p-3 mt-4" asp-controller="Parcel" asp-action="UpdateParcelView">
+            <div>
+                @*<div asp-validation-summary="All"></div>*@
+
+                <div class="mb-3">
+                    <label asp-for="Description"></label>
+                    <input class="form-control" asp-for="Description" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="FinalDestination"></label>
+                    <input class="form-control" asp-for="FinalDestination" />
+                    <span asp-validation-for="FinalDestination" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ParcelStatus"></label>
+                    <select asp-for="ParcelStatus" class="form-control">
+                        @foreach (var status in Enum.GetValues(typeof(ParcelStatus)))
+                        {
+                            <option value="@status">@EnumHelper.GetEnumDescription((Enum)status)</option>
+                        }
+                    </select>
+                    <span asp-validation-for="ParcelStatus" class="text-danger"></span>
+                </div>
+
+                <input type="hidden" asp-for="Id" />
+
+                <button type="submit" class="btn btn-primary" style="width: 150px">Update Parcel</button>
+                <a asp-controller="Parcel" asp-action="Index" class="btn btn-secondary" style="width: 150px">Back To List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

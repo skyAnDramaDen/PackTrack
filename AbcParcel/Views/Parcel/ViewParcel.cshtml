@@ -1,0 +1,26 @@
+﻿<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .registration-container {
+        max-width: 200%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+<h1>Track Parcel</h1>
+
+<form method="post" asp-controller="Parcel" asp-action="ViewParcelByTrackingNumber">
+    <div class="form-group registration-container">
+        <label for="trackingNumber">Enter Tracking Number:</label>
+        <input type="text" class="form-control" id="trackingNumber" name="trackingNumber" required />
+    </div>
+    <a asp-controller="Parcel" asp-action="Index" class="btn btn-secondary mt-2" style="width: 150px">Back To List</a>
+    <button type="submit" class="btn btn-primary mt-2">Search</button>
+</form>

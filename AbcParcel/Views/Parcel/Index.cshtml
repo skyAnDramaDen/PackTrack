@@ -1,0 +1,25 @@
+﻿@using AbcParcel.Common;
+@model IEnumerable<ParcelViewModel>
+
+<div class="row">
+    @foreach (var parcel in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@parcel.TrackingNumber</h5>
+                    <p class="card-text">@parcel.Description</p>
+                    <p class="card-text">Status: @parcel.ParcelStatus</p>
+                    @*<p class="card-text">Created By: @parcel.CreatedBy</p>*@
+                    @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+                    <a asp-controller="Parcel" asp-action="EditParcel" asp-route-id="@parcel.Id" class="btn btn-primary"> <i class="bi bi-pen"></i> Update Parcel</a>
+                    <a class="btn btn-danger mx-2" asp-controller="Parcel" asp-action="DeleteById" asp-route-id="@parcel.Id"><i class="bi bi-trash3-fill"></i> Trash</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<form class="btn btn-primary text-dark mt-2" asp-area="" asp-controller="Parcel" asp-action="CreateParcel">
+    <button type="submit" class="nav-link btn btn-link text-dark">Add Parcel</button>
+</form>

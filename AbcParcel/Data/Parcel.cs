@@ -1,4 +1,6 @@
-﻿namespace AbcParcel.Data
+﻿using System.ComponentModel;
+
+namespace AbcParcel.Data
 {
     public class Parcel : BaseEntity<long>
     {
@@ -12,6 +14,15 @@
     }
     public enum ParcelStatus
     {
-
+        [Description("Picked up")]
+        PickedUp,
+        [Description("Enroute to Destination")]
+        EnRouteToDestination,
+        [Description("Misplaced")]
+        Misplaced,
+        [Description("MissingInTransit")]
+        MissingInTransit,
+        [Description("Delivered")]
+        Delivered
     }
 }

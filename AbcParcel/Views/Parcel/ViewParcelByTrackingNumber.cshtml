@@ -1,0 +1,13 @@
+﻿@model AbcParcel.Common.ParcelViewModel
+
+<h3>Parcel Details</h3>
+
+<div>
+    <p><strong>Tracking Number:</strong> @Model.TrackingNumber</p>
+    <p><strong>Description:</strong> @Model.Description</p>
+    <p><strong>Status:</strong> @Model.ParcelStatus</p>
+    <p><strong>Originating Location:</strong> @Model.OriginatingLocation</p>
+    <p><strong>Final Destinal:</strong> @Model.FinalDestination</p>
+
+    <a asp-controller="Parcel" asp-action="Index" class="btn btn-secondary">Back to Parcel List </a>
+</div>
