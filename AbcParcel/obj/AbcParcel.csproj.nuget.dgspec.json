@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Okolie\\source\\repos\\ABCParcels\\PackTrack\\AbcParcel\\AbcParcel.csproj": {}
+    "C:\\Users\\Okolie\\OneDrive\\Desktop\\React\\PackTrack\\AbcParcel\\AbcParcel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Okolie\\source\\repos\\ABCParcels\\PackTrack\\AbcParcel\\AbcParcel.csproj": {
+    "C:\\Users\\Okolie\\OneDrive\\Desktop\\React\\PackTrack\\AbcParcel\\AbcParcel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Okolie\\source\\repos\\ABCParcels\\PackTrack\\AbcParcel\\AbcParcel.csproj",
+        "projectUniqueName": "C:\\Users\\Okolie\\OneDrive\\Desktop\\React\\PackTrack\\AbcParcel\\AbcParcel.csproj",
         "projectName": "AbcParcel",
-        "projectPath": "C:\\Users\\Okolie\\source\\repos\\ABCParcels\\PackTrack\\AbcParcel\\AbcParcel.csproj",
+        "projectPath": "C:\\Users\\Okolie\\OneDrive\\Desktop\\React\\PackTrack\\AbcParcel\\AbcParcel.csproj",
         "packagesPath": "C:\\Users\\Okolie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Okolie\\source\\repos\\ABCParcels\\PackTrack\\AbcParcel\\obj\\",
+        "outputPath": "C:\\Users\\Okolie\\OneDrive\\Desktop\\React\\PackTrack\\AbcParcel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
