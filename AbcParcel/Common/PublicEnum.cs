@@ -4,6 +4,7 @@
     {
     }
 
+    // Enumeration representing the result types of operations.
     public enum ResultType
     {
         Success = 1,

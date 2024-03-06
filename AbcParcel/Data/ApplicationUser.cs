@@ -18,6 +18,7 @@ namespace AbcParcel.Data
         public UserType UserType { get; set; }
     }
 
+    //enumeration representing user types admin and customer
     public enum UserType
     {
         [Description("Admin")]

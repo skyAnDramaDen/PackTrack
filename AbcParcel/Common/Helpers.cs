@@ -1,7 +1,10 @@
 ﻿namespace AbcParcel.Common
 {
+    // This static class contains helper methods for generating tracking numbers and extracting email domains.
     public static class Helpers
     {
+        // Generates a tracking number using the provided location code and a random number.
+        // Throws an ArgumentException if the location code is null, empty, or contains only whitespace.
         public static string GenerateTrackingNumber(string locationCode)
         {
             if (locationCode.Contains(" "))
@@ -17,13 +20,16 @@
 
             return trackingNumber;
         }
+
+        // Extracts the domain part from the given email address.
+        // Throws an ArgumentException if the email address is in an invalid format.
         public static string GetEmailDomain(string emailAddress)
         {
             string[] parts = emailAddress.Split('@');
 
             if (parts.Length == 2)
             {
-                return parts[0];
+                return parts[1];  // Return the domain part
             }
             else
             {

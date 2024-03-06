@@ -2,6 +2,7 @@
 
 namespace AbcParcel.Data
 {
+    // this represennts a parcel entity
     public class Parcel : BaseEntity<long>
     {
         public string TrackingNumber { get; set; }
@@ -12,6 +13,8 @@ namespace AbcParcel.Data
         public ParcelStatus ParcelStatus { get; set; }
         public ICollection<Tracking> Trackings { get; set; }
     }
+
+    //enumeration representing the possible status of a parcel
     public enum ParcelStatus
     {
         [Description("Picked up")]
